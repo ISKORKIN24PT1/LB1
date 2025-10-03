@@ -24,9 +24,11 @@ void check(const wstring& Text, const wstring& key) {
 int main() {
     setlocale(LC_ALL, "");
     
-    check(L"ПРИВЕТ", L"МИР");        
-    check(L"привет", L"мир");        
-    check(L"ПрИвЕт", L"Мир");        
+    // Тестируем букву Ё в разных регистрах
+    check(L"ПРИВЕТ", L"МИР");
+    check(L"привет", L"мир");
+    check(L"доброе утро, ёж", L"Мир");
+    
     
     return 0;
 }

@@ -1,5 +1,0 @@
-# Игнорировать все кроме наших папок и .gitignore
-*
-!.gitignore
-!timpl/
-!timpl.2/

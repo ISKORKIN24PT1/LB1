@@ -10,12 +10,15 @@ modAlphaCipher::modAlphaCipher(const std::wstring& skey) {
     std::transform(upperKey.begin(), upperKey.end(), upperKey.begin(), toUpper);
     key = convert(upperKey);
 }
+
 wchar_t modAlphaCipher::toUpper(wchar_t c) {
+    // Преобразование строчных русских букв в заглавные
     if (c >= L'а' && c <= L'я') {
         return L'А' + (c - L'а');
     }
+    // Особый случай для буквы ё
     if (c == L'ё') {
-        return L'Е'; 
+        return L'Ё'; // Преобразуем в заглавную Ё
     }
     return std::towupper(c);
 }
@@ -30,6 +33,7 @@ std::vector<int> modAlphaCipher::convert(const std::wstring& s) {
     }
     return result;
 }
+
 std::wstring modAlphaCipher::convert(const std::vector<int>& v) {
     std::wstring result;
     for (auto i : v) {

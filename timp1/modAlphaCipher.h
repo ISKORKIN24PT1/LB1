@@ -6,7 +6,7 @@
 
 class modAlphaCipher {
 private:
-    std::wstring numAlpha = L"АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"; 
+    std::wstring numAlpha = L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"; // Правильный русский алфавит
     std::map<wchar_t, int> alphaNum;
     std::vector<int> key;
 
